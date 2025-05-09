@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>Hardware Save</title>
+  </head>
+  <body>
+    <H1>
+    Búsqueda Hardware Save
+    </H1>
+
+    <H2>
+    AMAZON
+    </H2>
+    {{ resultados }}
+    
+    {% for producto in resultados['api'] %}
+      <p>{{ producto['nombre'] }}</p>
+      <p>{{ producto['enlace'] }}</p>
+      <p>{{ producto['imagen'] }}</p>
+      <p>{{ producto['precio'] }}</p>
+    {% endfor %}
+
+    <table border='1' sumary = 'productos' class = 'tablaProductos'>
+      <thead>
+        <th>Nombre</th>
+        <th>Enlace</th>
+        <th>Imagen</th>
+        <th>Precio</th>
+      </thead>
+      <tbody>
+        {% for producto in resultados['api'] %}
+            <tr>
+                <td>{{ producto['nombre'] }}</td>
+                <td>{{ producto['enlace'] }}</td>
+                <td>{{ producto['imagen'] }}</td>
+                <td>{{ producto['precio'] }}</td>
+            </tr>
+            {% endfor %}
+      </tbody>
+    </table>
+
+    <H2>
+    EuropeanPC
+    </H2>
+
+    <table border='1' sumary = 'productos' class = 'tablaProductos'>
+        <thead>
+          <th>Nombre</th>
+          <th>Enlace</th>
+          <th>Imagen</th>
+          <th>Precio</th>
+        </thead>
+        <tbody>
+          {% for producto in resultados['europa'] %}
+          <tr>
+            <td>{{ producto['nombre'] }}</td>
+            <td>{{ producto['enlace'] }}</td>
+            <td>{{ producto['imagen'] }}</td>
+            <td>{{ producto['precio'] }}</td>
+          </tr>
+           {% endfor %}
+        </tbody>
+      </table>
+
+    <H2>
+    HardwareOnline
+    </H2>
+
+    <table border='1' sumary = 'productos' class = 'tablaProductos'>
+        <thead>
+          <th>Nombre</th>
+          <th>Enlace</th>
+          <th>Imagen</th>
+          <th>Precio</th>
+        </thead>
+        <tbody>
+          {% for producto in resultados['ho'] %}
+              <tr>
+                <td>{{ producto['nombre'] }}</td>
+                <td>{{ producto['enlace'] }}</td>
+                <td>{{ producto['imagen'] }}</td>
+                <td>{{ producto['precio'] }}</td>
+              </tr>
+
+          {% endfor %}
+        </tbody>
+      </table>
+    
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados de busqueda</title>
+</head>
+<body>
+
+    
+    {% for producto in api %}
+    <div>
+      <p>Nombre: {{ producto['nombre'] }}</p>
+      <a>{{ producto['enlace'] }}</a>
+      <img src="{{ producto['imagen'] }}" ></p>
+      <p>{{ producto['precio'] }}</p>
+    </div>
+    {% endfor %}
+
+    {% for producto in europa %}
+    <div>
+        <p>Nombre: {{ producto['nombre'] }}</p>
+        <a>{{ producto['enlace'] }}</a>
+        <img src="{{ producto['imagen'] }}" ></p>
+        <p>{{ producto['precio'] }}</p>
+      </div>
+    {% endfor %}
+
+    {% for producto in ho %}
+    <div>
+        <p>Nombre: {{ producto['nombre'] }}</p>
+        <a>{{ producto['enlace'] }}</a>
+        <img src="{{ producto['imagen'] }}" ></p>
+        <p>{{ producto['precio'] }}</p>
+      </div>
+    {% endfor %}
+</body>
+</html>
