@@ -5,7 +5,7 @@ import json
 def busqueda_api(termino):
 
     params = {
-    'api_key': '253AE86FCA9F429B96AFB4E7E9482161',
+    'api_key': 'XXX',
     'type': 'search',
     'amazon_domain': 'amazon.es',
     'search_term': termino
